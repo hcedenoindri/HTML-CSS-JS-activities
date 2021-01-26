@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>IT 202 Lab 3</title>
+        <style>
+            #image {
+                width: 90%;
+                height: 150%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="header1"> </h1>
+        <img id="image" src="">
+        <p id="paragraph"></p>
+
+        <script>
+            fetch('https://api.nasa.gov/planetary/apod?api_key=aPU5frS3i155Q05rofh9t7Vmt8nfJ6fW1fH2V6ib')
+                .then(response => response.json())
+                .then(data => {
+                    var header1 = data.title;
+                    var image = data.hdurl;
+                    var paragraph = data.explanation;
+                    document.getElementById("header1").innerHTML = header1;
+                    document.getElementById("image").src = image;
+                    document.getElementById("paragraph").innerHTML = paragraph;
+                });
+        </script>
+    </body>
+</html>
