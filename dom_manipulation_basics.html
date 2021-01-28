@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title id="title">DOM Manipulation</title>
+
+    <style>
+      .big {font-size:3em; }
+      .blue {color: blue;}
+      .bigBorder {border: black 3px solid;}
+    </style>
+
+  </head>
+  <body>
+
+    <div id="div1" class="bigBorder" ></div>
+    <div id="div2">
+      <img id="image" src="">
+    </div>
+    <div id="div3">
+      This div should be programmatically removed.
+    </div>
+
+    <ul id="ulist">
+      <li class="big blue">IT202</li>
+    </ul>
+
+    <script>
+      const div1 = document.getElementById("div1");
+      const image = document.getElementById("image");
+      const div3 = document.getElementById("div3");
+      const title = document.getElementById("title");
+      const ulist = document.getElementById("ulist");
+
+      div1.innerHTML = "UIC";
+
+      div1.style = "color: #D50032;";
+
+      div1.class = "blg";
+
+      image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/University_of_Illinois_at_Chicago_circle_logo.svg/1200px-University_of_Illinois_at_Chicago_circle_logo.svg.png ";
+
+      image.style = "width: 25%; height: 25%;";
+
+      div3.remove();
+
+      title.innerHTML = "hcedenoindri";
+
+      const list_item = document.createElement("li"); 
+
+      list_item.innerHTML = "Computer Science";
+
+      ulist.appendChild( list_item);
+
+      ulist.querySelectorAll('li')[0].classList.remove("big");
+
+      ulist.querySelectorAll('li')[1].classList.add("blue");
+
+      const image2 = image.cloneNode(true);
+
+      div1.append( image2);
+
+
+
+    </script>
+
+
+  </body>
+</html>
