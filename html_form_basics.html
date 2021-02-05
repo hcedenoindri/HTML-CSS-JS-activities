@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+  </head>
+  <body>
+    <h1>Form Basics</h1>
+
+    <form id="form1" name="form1">
+        <input type="text" id="text1" name="text1"><br>
+        <div name="radio1">
+            <input type="radio" value="red">
+            <input type="radio" value="green">
+            <input type="radio" value="blue">
+        </div>
+
+        <textarea id="textarea1" name="textarea1" 
+            placeholder="Please provide any additional feedback">    
+        </textarea>
+
+        <input type="submit"> Submit </input>
+    </form>
+
+    <select name="select1" id="select1" form="form1">
+        <option value=""></option>
+        <option value="Mon">Mon</option>
+        <option value="Wed">Wed</option>
+        <option value="Fri">Fri</option>
+    </select>
+
+
+    <p id="uptonSinclairQuote">
+        It is difficult to get a man to understand something, when 
+        his salary depends upon his not understanding it! -- Upton Sinclair
+    </p>
+
+
+    <script>
+        text1.value = "Hector Cedeno Indriago";
+        form1.querySelector('div input[value="green"]').checked = true;
+        let quote = document.querySelector("#uptonSinclairQuote").innerHTML;
+        textarea1.value = quote;
+        select1.addEventListener('change', (event) => {
+            let option = select1.querySelector("option:checked").value;
+            console.log( option);
+        });
+    </script>
+
+  </body>
+
+</html>
