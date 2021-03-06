@@ -24,7 +24,7 @@
     }
 
     function drawText(s, x, y) {
-        context.font = "40px 'Akaya Telivigala', cursive";
+        context.font = "40px 'DotGothic16', sans-serif";
         context.fillStyle = "black";
         context.fillText(s, x, y);
     }
