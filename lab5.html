@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="lab5.json">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Employee Search</title>
@@ -103,7 +103,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          navigator.serviceWorker.register('/lab5_sw.js').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(err) {
