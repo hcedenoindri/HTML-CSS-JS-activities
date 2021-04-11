@@ -35,8 +35,7 @@
             context.drawImage(img, x, y, 150, 150);
         }
     };
-    img.src="https://scontent-ort2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/129005510_967209693819461_7543564296688646827_n.jpg?tp=1&_nc_ht=scontent-ort2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=0TMK1EWVogwAX9DwPff&oh=ead0a55677acc7d375683d3050e30dcd&oe=606DD039"
-
+    img.src="https://static.boredpanda.com/blog/wp-content/uploads/2015/02/cute-cats-sleeping-on-dogs-7__605.jpg";
     context.font = "30px DotGothic16, sans-serif";
     context.fillStyle = "black";
     context.fillText("Hector Cedeno Indriago", 25, 400);
